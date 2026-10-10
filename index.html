@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amit K. — 3D Artist &amp; Technical Artist | Blender · Unreal · Unity · Real-time pipelines</title>
+<meta name="description" content="Portfolio: 3D models, environments, sets and textures turned into documentary films. Custom real-time render engine, posing tools and audit systems. Creator of Model Evidence.">
+<meta property="og:title" content="Amit K. — 3D Artist &amp; Technical Artist">
+<meta property="og:description" content="3D environments, sets, textures — and the tools that turn them into films. Creator of Model Evidence.">
+<meta property="og:image" content="assets/img/mailbox-hero.jpg">
+<style>
+:root{--bg:#0e0f12;--panel:#15171c;--line:#24272e;--fg:#e8e6e1;--dim:#9a978f;--red:#d3452f;--gold:#c9a35a}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font:16px/1.6 "Segoe UI",system-ui,-apple-system,sans-serif}
+a{color:var(--gold);text-decoration:none}a:hover{text-decoration:underline}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:600;letter-spacing:.2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+section{padding:64px 0;border-top:1px solid var(--line)}
+.kicker{color:var(--red);font-size:12px;text-transform:uppercase;letter-spacing:2.5px;font-weight:600;margin-bottom:10px}
+h2{font-size:30px;margin-bottom:26px}
+.lead{color:var(--dim);max-width:760px}
+
+/* hero */
+header.hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;background:#000 url("assets/img/mailbox-hero.jpg") center/cover no-repeat}
+header.hero .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,11,13,.25) 0%,rgba(10,11,13,.05) 40%,rgba(14,15,18,.96) 92%)}
+.hero-inner{position:relative;width:100%;padding:0 22px 54px;max-width:1080px;margin:0 auto}
+.hero h1{font-size:clamp(34px,6vw,62px);line-height:1.08;max-width:820px;text-shadow:0 2px 24px rgba(0,0,0,.6)}
+.hero .sub{margin-top:14px;font-size:clamp(15px,2vw,19px);color:#d9d6cf;max-width:720px;text-shadow:0 1px 12px rgba(0,0,0,.7)}
+.hero .cta{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 22px;border:1px solid var(--gold);border-radius:3px;color:var(--gold);font-size:14px;letter-spacing:.6px;background:rgba(14,15,18,.55)}
+.btn.solid{background:var(--gold);color:#141414;font-weight:600}
+.btn:hover{text-decoration:none;filter:brightness(1.12)}
+.credit{position:absolute;right:14px;bottom:10px;font-size:11px;color:#8b887f}
+
+/* skills */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:20px 22px}
+.card h3{font-size:17px;margin-bottom:8px;color:var(--fg)}
+.card p{color:var(--dim);font-size:14px}
+.card .tag{display:inline-block;margin-top:12px;font-size:11px;color:var(--gold);border:1px solid #4a4231;border-radius:20px;padding:2px 10px;letter-spacing:.5px}
+
+/* pipeline */
+ol.steps{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+ol.steps li{counter-increment:s;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:18px 20px 18px 58px;position:relative;font-size:14px;color:var(--dim)}
+ol.steps li b{display:block;color:var(--fg);font-size:15px;margin-bottom:4px}
+ol.steps li::before{content:counter(s);position:absolute;left:16px;top:16px;width:28px;height:28px;border:1px solid var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--red);font-size:13px;font-weight:700}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
+figure{background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+figure img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
+figure.wide{grid-column:1/-1}
+figure.wide img{aspect-ratio:21/9}
+figcaption{padding:12px 16px;font-size:13px;color:var(--dim)}
+figcaption b{color:var(--fg);display:block;font-size:14px;margin-bottom:2px}
+
+/* tools */
+.tool{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}
+.tool:last-child{border-bottom:none}
+.tool .num{font-family:Georgia,serif;font-size:34px;color:var(--red);line-height:1}
+.tool h3{font-size:19px;margin-bottom:6px}
+.tool p{color:var(--dim);font-size:14.5px;max-width:820px}
+.tool .meta{margin-top:8px;font-size:12.5px;color:var(--gold)}
+
+/* videos */
+.vids{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+.vid{background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.vid .ratio{position:relative;padding-top:56.25%}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid .cap{padding:12px 16px;font-size:13.5px;color:var(--dim)}
+.vid .cap b{color:var(--fg)}
+
+footer{padding:44px 0 60px;border-top:1px solid var(--line)}
+footer .big{font-family:Georgia,serif;font-size:26px;margin-bottom:14px}
+footer .links{display:flex;gap:22px;flex-wrap:wrap;font-size:15px}
+footer .fine{margin-top:26px;font-size:12px;color:#6d6a63}
+@media(max-width:640px){.tool{grid-template-columns:1fr}.tool .num{margin-bottom:6px}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="scrim"></div>
+  <div class="hero-inner">
+    <div class="kicker">Model Evidence — a true-crime documentary channel, made end-to-end by one person</div>
+    <h1>I build 3D worlds and the tools that turn them into films.</h1>
+    <p class="sub">Blender · Unreal Engine · Unity · real-time WebGL pipelines. Models, environments, sets and textures — converted into finished, scored, graded documentary videos. Everything on this page was produced with the pipelines I wrote myself.</p>
+    <div class="cta">
+      <a class="btn solid" href="#work">Selected work</a>
+      <a class="btn" href="https://www.youtube.com/@ModelEvidence" target="_blank" rel="noopener">YouTube channel</a>
+      <a class="btn" href="https://github.com/Amitkmarreji/Model-evidence" target="_blank" rel="noopener">This repo</a>
+    </div>
+  </div>
+  <div class="credit">Frame: EP04 set build — procedural mailbox, archive-accurate, custom render engine</div>
+</header>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="kicker">What I do</div>
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="card"><h3>3D models &amp; environments</h3><p>Hard-surface and organic modelling, procedural set building in Blender (bpy), archive-photo-accurate reconstruction, period dressing, foliage and terrain.</p><span class="tag">Blender · bpy</span></div>
+      <div class="card"><h3>Sets &amp; textures</h3><p>Procedural and decal texturing (galvanised metal, worn enamel, aged gilt, paper), light budgets in physical candela, clean contact shadows, graded looks.</p><span class="tag">Texturing · lookdev</span></div>
+      <div class="card"><h3>Real-time engines</h3><p>Scene assembly, lighting and camera work in Unreal Engine and Unity; a custom three.js render engine with a hand-tuned post chain for daily production.</p><span class="tag">Unreal · Unity · three.js</span></div>
+      <div class="card"><h3>Video delivery</h3><p>Edit, grade, score and mix to −14 LUFS in DaVinci Resolve + ffmpeg. Motion graphics, title kits, thumbnail staging — full YouTube delivery pipeline.</p><span class="tag">Resolve · ffmpeg</span></div>
+      <div class="card"><h3>Pipeline &amp; tools</h3><p>Python/three.js tooling: pose studio with IK, shot generators, render farm with a job server, automated quality audits on every frame.</p><span class="tag">Python · JS tooling</span></div>
+      <div class="card"><h3>AI-assisted production</h3><p>AI narration (voice conversion), scripted scoring, research-to-script workflows, AI helpers woven through the pipeline — always under manual art direction.</p><span class="tag">AI workflows</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="pipeline">
+  <div class="wrap">
+    <div class="kicker">How an episode is made</div>
+    <h2>My pipeline</h2>
+    <p class="lead" style="margin-bottom:22px">A 9–10 minute documentary goes from primary-source research to delivered video through six stages. Each stage is backed by a tool I built so the next episode starts faster than the last.</p>
+    <ol class="steps">
+      <li><b>Research → script</b>Primary sources only; disagreements between accounts are stated, never smoothed over.</li>
+      <li><b>Shot &amp; visual plan</b>Every shot mapped: which set, which people, which pose, which camera move.</li>
+      <li><b>Sets in Blender (bpy)</b>Procedural set builders turn a floor plan and archive photos into a lit, dressed 3D set.</li>
+      <li><b>Posing in pose-three</b>My browser posing studio: pose characters inside the real set through the shot camera, IK grips onto props, save with one keystroke.</li>
+      <li><b>Render on the farm</b>Job server drives the custom render engine on the GPU; supersampled stills and 2.39:1 frames with automated audits.</li>
+      <li><b>Assembly &amp; mix</b>Resolve edit, film grade, scored soundtrack ducked under narration, mixed to broadcast loudness.</li>
+    </ol>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="kicker">Selected frames — every pixel produced by my pipeline</div>
+    <h2>Work in progress: Episode IV</h2>
+    <div class="gal">
+      <figure class="wide"><img src="assets/img/mailbox-hero.jpg" alt="Snowy rural mailbox set, cinematic still"><figcaption><b>The mailbox</b>Procedural bpy build from the real FBI archive photograph — rolled seams, riveted flag, hand-painted name decal with rust/grime layers, footprints and road ruts in the snow. Custom render engine, graded frame.</figcaption></figure>
+      <figure><img src="assets/img/diner-night.jpg" alt="Night diner set with neon-lit sign in snow"><figcaption><b>Sportsmen Motel &amp; diner</b>Night exterior set: sign design, kerosene-warm practicals against cold window light, snow dressing.</figcaption></figure>
+      <figure><img src="assets/img/watcher-window.jpg" alt="Interior at night, figure watching through binoculars"><figcaption><b>The watcher's room</b>Low-key interior: single warm practical, moonlight through glass, staged POV shot.</figcaption></figure>
+      <figure><img src="assets/img/arrest-cuffs.jpg" alt="Agents arresting a suspect in a snowy clearing"><figcaption><b>The arrest</b>Frozen story poses — IK-gripped props, forearms resting correctly on surfaces, camera comfort rules enforced. My audit system checks every still before it ships.</figcaption></figure>
+      <figure><img src="assets/img/cold-open-birch.jpg" alt="Figures moving through birch trees in morning fog"><figcaption><b>Cold open</b>Overcast exterior grade: teal-green fog depth, light snow fall, wide lens showing surroundings.</figcaption></figure>
+      <figure><img src="assets/img/pose-sheet.jpg" alt="Contact sheet of multiple posed scenes"><figcaption><b>Pose contact sheet</b>One sheet from the blocked and user-posed sequences — each frame passes reach-miss, ghost and comfort audits automatically.</figcaption></figure>
+      <figure><img src="assets/img/props-sheet.jpg" alt="Close-ups of hand-held props in hands"><figcaption><b>Hand-held props</b>Binoculars and a desk handset gripped through IK, coiled cord simulated — props posed in-set, movable live in the tool.</figcaption></figure>
+      <figure><img src="assets/img/audit-close.jpg" alt="Close-up of hands holding a radio"><figcaption><b>Detail audit</b>Close-up check of a radio grip — hands stay at medium range in final cuts, but the audit zooms in so grips are verified at any distance.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="tools">
+  <div class="wrap">
+    <div class="kicker">Built, not bought</div>
+    <h2>Tools I wrote for my own studio</h2>
+    <p class="lead" style="margin-bottom:8px">I kept hitting walls in off-the-shelf tools, so I wrote my own. Each one runs in daily production.</p>
+    <div class="tool"><div class="num">01</div><div><h3>Real-time render engine + farm</h3><p>A vanilla three.js engine (r186) with a hand-built post chain — N8AO contact shadows, thin-lens depth of field, mip bloom, AgX tonemapping, SMAA, halation, film LUT — rendered supersampled and downsampled with Lanczos. A job server queues shots across the GPU and encodes with hardware H.264.</p><div class="meta">three.js · WebGL · Node job server · GPU scheduling · 0.05 s/frame at 2× supersample</div></div></div>
+    <div class="tool"><div class="num">02</div><div><h3>pose-three — character posing studio</h3><p>A browser tool for posing characters inside the real set, through the real shot camera: IK with finger presets, drag-to-place with ground marks, in-set props with true grips, and a safe-save UX designed so no pose is ever lost by accident.</p><div class="meta">TypeScript · Vite · IK solvers · UX for daily artist use</div></div></div>
+    <div class="tool"><div class="num">03</div><div><h3>Automated quality audits</h3><p>Every still and camera move passes automated checks: hands-reach-target (reach-miss), no limb or prop penetrates geometry (ghost audit), camera rotation and zoom speeds stay inside comfort limits, and light intensities are budgeted in physical candela.</p><div class="meta">Computer-graphics QA · camera governors · lighting budgets</div></div></div>
+    <div class="tool"><div class="num">04</div><div><h3>Procedural set builders</h3><p>Headless Blender scripts that turn floor plans and archive photographs into dressed sets — cabin, motel, newsroom, mailbox — with procedural materials, decals and weathering, exported straight into the engine.</p><div class="meta">Blender bpy · procedural materials · asset pipeline</div></div></div>
+  </div>
+</section>
+
+<section id="films">
+  <div class="wrap">
+    <div class="kicker">Shipped</div>
+    <h2>Documentaries on Model Evidence</h2>
+    <div class="vids">
+      <div class="vid"><div class="ratio"><iframe src="https://www.youtube-nocookie.com/embed/aWzCo__mKTg" title="The $500 Million Art Heist Nobody Has Ever Solved" allowfullscreen loading="lazy"></iframe></div><div class="cap"><b>The $500 Million Art Heist Nobody Has Ever Solved</b> — holocast explainers, stipple dissolves, 3D hologram maps.</div></div>
+      <div class="vid"><div class="ratio"><iframe src="https://www.youtube-nocookie.com/embed/q7Mm-Sjhwew" title="How a House Painter Stole the Mona Lisa" allowfullscreen loading="lazy"></iframe></div><div class="cap"><b>How a House Painter Stole the Mona Lisa</b> — the episode that defined the studio look: real diorama + holocast layers.</div></div>
+      <div class="vid"><div class="ratio"><iframe src="https://www.youtube-nocookie.com/embed/uvbqEji1g_w" title="How 3 Men Escaped Alcatraz With Spoons" allowfullscreen loading="lazy"></iframe></div><div class="cap"><b>How 3 Men Escaped Alcatraz With Spoons</b> — set builds, spoon-dug vent reconstruction, tidal escape map.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="web">
+  <div class="wrap">
+    <div class="kicker">Also shipped</div>
+    <h2>Web work</h2>
+    <p class="lead" style="margin-bottom:18px">The same end-to-end habit applies off the render farm — design, build, deploy.</p>
+    <div class="grid">
+      <div class="card"><h3>Finaxo Associates</h3><p>Company site for a consulting business — data-driven build step, deploy pipeline to Netlify.</p><a class="tag" href="https://finaxoassociates.netlify.app" target="_blank" rel="noopener">finaxoassociates.netlify.app</a></div>
+      <div class="card"><h3>Dhilraj portfolio</h3><p>Personal portfolio site — Next.js, designed and shipped live on Vercel.</p><a class="tag" href="https://dhilraj.vercel.app" target="_blank" rel="noopener">dhilraj.vercel.app</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="big">Currently: Episode IV in production.</div>
+    <p class="lead" style="margin-bottom:22px">I'm actively learning and tightening the pipeline — faster posing, better audits, less friction between idea and frame. If your studio needs someone who builds the art <i>and</i> the tools that make the art, I'd like to talk.</p>
+    <div class="links">
+      <a href="https://www.youtube.com/@ModelEvidence" target="_blank" rel="noopener">YouTube — @ModelEvidence</a>
+      <a href="https://github.com/Amitkmarreji" target="_blank" rel="noopener">GitHub — Amitkmarreji</a>
+      <a href="https://github.com/Amitkmarreji/Model-evidence" target="_blank" rel="noopener">This repository</a>
+    </div>
+    <div class="fine">All frames rendered with custom tooling · Blender, Unreal Engine, Unity, three.js, DaVinci Resolve · © 2026 Amit K.</div>
+  </div>
+</footer>
+
+</body>
+</html>
