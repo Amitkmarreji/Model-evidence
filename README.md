@@ -17,7 +17,7 @@ Three episodes shipped on YouTube (Alcatraz escape · the Mona Lisa heist · the
 
 | Tool | What it does | Stack |
 |---|---|---|
-| **Real-time render engine + farm** | Vanilla three.js engine with a hand-tuned post chain (N8AO, thin-lens DOF, mip bloom, AgX, SMAA, halation, film LUT), supersampled rendering, GPU job server, hardware H.264 encode | three.js · WebGL · Node · ffmpeg |
+| **Real-time render engine + farm** | Custom-built real-time engine with a hand-tuned post chain (N8AO, thin-lens DOF, mip bloom, AgX, SMAA, halation, film LUT), supersampled rendering, GPU job server, hardware H.264 encode | WebGL · Node · ffmpeg |
 | **pose-three** | Browser posing studio: pose characters inside the real set through the shot camera; IK grips, finger presets, drag-to-place with ground marks, safe-save UX | TypeScript · Vite · IK |
 | **Quality audits** | Automated per-frame checks: reach-miss, ghost/penetration, camera comfort governors (°/s), candela light budgets | CG QA · automation |
 | **Procedural set builders** | Headless Blender scripts turning floor plans + archive photos into dressed, textured sets (cabin, motel, newsroom, mailbox) | Blender bpy · Python |
@@ -25,7 +25,7 @@ Three episodes shipped on YouTube (Alcatraz escape · the Mona Lisa heist · the
 
 ## Skills
 
-Blender (modelling, procedural sets, texturing/decals) · Unreal Engine · Unity · three.js/WebGL · Python & JS tooling · DaVinci Resolve · motion graphics · AI-assisted production workflows (narration, scoring, research) under manual art direction.
+Blender (modelling, procedural sets, texturing/decals) · Unreal Engine · Unity · WebGL · Python & JS tooling · DaVinci Resolve · motion graphics · AI-assisted production workflows (narration, scoring, research) under manual art direction.
 
 ## Site
 

@@ -85,7 +85,7 @@ footer .fine{margin-top:26px;font-size:12px;color:#6d6a63}
   <div class="hero-inner">
     <div class="kicker">Model Evidence — a true-crime documentary channel, made end-to-end by one person</div>
     <h1>I build 3D worlds and the tools that turn them into films.</h1>
-    <p class="sub">Blender · Unreal Engine · Unity · real-time WebGL pipelines. Models, environments, sets and textures — converted into finished, scored, graded documentary videos. Everything on this page was produced with the pipelines I wrote myself.</p>
+    <p class="sub">Blender · Unreal Engine · Unity · custom real-time pipelines. Models, environments, sets and textures — converted into finished, scored, graded documentary videos. Everything on this page was produced with the pipelines I wrote myself.</p>
     <div class="cta">
       <a class="btn solid" href="#work">Selected work</a>
       <a class="btn" href="https://www.youtube.com/@ModelEvidence" target="_blank" rel="noopener">YouTube channel</a>
@@ -102,9 +102,9 @@ footer .fine{margin-top:26px;font-size:12px;color:#6d6a63}
     <div class="grid">
       <div class="card"><h3>3D models &amp; environments</h3><p>Hard-surface and organic modelling, procedural set building in Blender (bpy), archive-photo-accurate reconstruction, period dressing, foliage and terrain.</p><span class="tag">Blender · bpy</span></div>
       <div class="card"><h3>Sets &amp; textures</h3><p>Procedural and decal texturing (galvanised metal, worn enamel, aged gilt, paper), light budgets in physical candela, clean contact shadows, graded looks.</p><span class="tag">Texturing · lookdev</span></div>
-      <div class="card"><h3>Real-time engines</h3><p>Scene assembly, lighting and camera work in Unreal Engine and Unity; a custom three.js render engine with a hand-tuned post chain for daily production.</p><span class="tag">Unreal · Unity · three.js</span></div>
+      <div class="card"><h3>Real-time engines</h3><p>Scene assembly, lighting and camera work in Unreal Engine and Unity; plus a custom-built real-time render engine with a hand-tuned post chain for daily production.</p><span class="tag">Unreal · Unity · custom engine</span></div>
       <div class="card"><h3>Video delivery</h3><p>Edit, grade, score and mix to −14 LUFS in DaVinci Resolve + ffmpeg. Motion graphics, title kits, thumbnail staging — full YouTube delivery pipeline.</p><span class="tag">Resolve · ffmpeg</span></div>
-      <div class="card"><h3>Pipeline &amp; tools</h3><p>Python/three.js tooling: pose studio with IK, shot generators, render farm with a job server, automated quality audits on every frame.</p><span class="tag">Python · JS tooling</span></div>
+      <div class="card"><h3>Pipeline &amp; tools</h3><p>Python &amp; JS tooling: pose studio with IK, shot generators, render farm with a job server, automated quality audits on every frame.</p><span class="tag">Python · JS tooling</span></div>
       <div class="card"><h3>AI-assisted production</h3><p>AI narration (voice conversion), scripted scoring, research-to-script workflows, AI helpers woven through the pipeline — always under manual art direction.</p><span class="tag">AI workflows</span></div>
     </div>
   </div>
@@ -148,7 +148,7 @@ footer .fine{margin-top:26px;font-size:12px;color:#6d6a63}
     <div class="kicker">Built, not bought</div>
     <h2>Tools I wrote for my own studio</h2>
     <p class="lead" style="margin-bottom:8px">I kept hitting walls in off-the-shelf tools, so I wrote my own. Each one runs in daily production.</p>
-    <div class="tool"><div class="num">01</div><div><h3>Real-time render engine + farm</h3><p>A vanilla three.js engine (r186) with a hand-built post chain — N8AO contact shadows, thin-lens depth of field, mip bloom, AgX tonemapping, SMAA, halation, film LUT — rendered supersampled and downsampled with Lanczos. A job server queues shots across the GPU and encodes with hardware H.264.</p><div class="meta">three.js · WebGL · Node job server · GPU scheduling · 0.05 s/frame at 2× supersample</div></div></div>
+    <div class="tool"><div class="num">01</div><div><h3>Real-time render engine + farm</h3><p>A custom-built real-time engine with a hand-built post chain — N8AO contact shadows, thin-lens depth of field, mip bloom, AgX tonemapping, SMAA, halation, film LUT — rendered supersampled and downsampled with Lanczos. A job server queues shots across the GPU and encodes with hardware H.264.</p><div class="meta">Custom engine · Node job server · GPU scheduling · 0.05 s/frame at 2× supersample</div></div></div>
     <div class="tool"><div class="num">02</div><div><h3>pose-three — character posing studio</h3><p>A browser tool for posing characters inside the real set, through the real shot camera: IK with finger presets, drag-to-place with ground marks, in-set props with true grips, and a safe-save UX designed so no pose is ever lost by accident.</p><div class="meta">TypeScript · Vite · IK solvers · UX for daily artist use</div></div></div>
     <div class="tool"><div class="num">03</div><div><h3>Automated quality audits</h3><p>Every still and camera move passes automated checks: hands-reach-target (reach-miss), no limb or prop penetrates geometry (ghost audit), camera rotation and zoom speeds stay inside comfort limits, and light intensities are budgeted in physical candela.</p><div class="meta">Computer-graphics QA · camera governors · lighting budgets</div></div></div>
     <div class="tool"><div class="num">04</div><div><h3>Procedural set builders</h3><p>Headless Blender scripts that turn floor plans and archive photographs into dressed sets — cabin, motel, newsroom, mailbox — with procedural materials, decals and weathering, exported straight into the engine.</p><div class="meta">Blender bpy · procedural materials · asset pipeline</div></div></div>
@@ -188,7 +188,7 @@ footer .fine{margin-top:26px;font-size:12px;color:#6d6a63}
       <a href="https://github.com/Amitkmarreji" target="_blank" rel="noopener">GitHub — Amitkmarreji</a>
       <a href="https://github.com/Amitkmarreji/Model-evidence" target="_blank" rel="noopener">This repository</a>
     </div>
-    <div class="fine">All frames rendered with custom tooling · Blender, Unreal Engine, Unity, three.js, DaVinci Resolve · © 2026 Amit K.</div>
+    <div class="fine">All frames rendered with custom tooling · Blender, Unreal Engine, Unity, custom real-time engine, DaVinci Resolve · © 2026 Amit K.</div>
   </div>
 </footer>
 
